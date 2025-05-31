@@ -50,8 +50,8 @@
     <div class="filter-group">
       <label><input type="checkbox" /> Posted Today</label>
       <label><input type="checkbox" /> Hide Duplicate</label>
-      <label><input type="checkbox" /> Cats only</label>
-      <label><input type="checkbox" /> Dogs only</label>
+      <label><input type="checkbox" [checked]="filterCatsOnly" (change)="onCatsOnlyChange($event)" /> Cats only</label>
+      <label><input type="checkbox" [checked]="filterDogsOnly" (change)="onDogsOnlyChange($event)" /> Dogs only</label>
     </div>
     <div class="filter-group">
       <label>MILES FROM LOCATION</label>
@@ -67,86 +67,15 @@
   <!-- Listings Grid -->
   <section class="listings-section">
     <div class="listings-grid">
-      <!-- Listing Card Example -->
-      <div class="listing-card">
+      <div class="listing-card" *ngFor="let listing of filteredListings">
         <div class="listing-img">
-          <img src="/cat.png" alt="Default Cat" />
-          <div class="quick-view">QUICK VIEW</div>
+          <img [src]="listing.type === 'cat' ? '/cat.png' : '/dog.png'" [alt]="listing.type === 'cat' ? 'Default Cat' : 'Default Dog'" />
+          <div class="quick-view" (click)="openQuickView(listing)">QUICK VIEW</div>
         </div>
         <div class="listing-info">
-          <div class="listing-title">White cat kittens</div>
-          <div class="listing-meta">1h ago · Ktown</div>
+          <div class="listing-title">{{ listing.title }}</div>
           <div class="listing-actions">
-            <img src="/kid_star.png" alt="Favorite" class="favorite-icon" />
-            <img src="/delete.png" alt="Delete" class="delete-icon" />
-          </div>
-        </div>
-      </div>
-      <div class="listing-card">
-        <div class="listing-img">
-          <img src="/cat.png" alt="Default Cat" />
-          <div class="quick-view">QUICK VIEW</div>
-        </div>
-        <div class="listing-info">
-          <div class="listing-title">8 weeks old kitten</div>
-          <div class="listing-meta">1h ago · Riverside</div>
-          <div class="listing-actions">
-            <img src="/kid_star.png" alt="Favorite" class="favorite-icon" />
-            <img src="/delete.png" alt="Delete" class="delete-icon" />
-          </div>
-        </div>
-      </div>
-      <div class="listing-card">
-        <div class="listing-img">
-          <img src="/cat.png" alt="Default Cat" />
-          <div class="quick-view">QUICK VIEW</div>
-        </div>
-        <div class="listing-info">
-          <div class="listing-title">Cats for rehoming</div>
-          <div class="listing-meta">3h ago · Norwalk</div>
-          <div class="listing-actions">
-            <img src="/kid_star.png" alt="Favorite" class="favorite-icon" />
-            <img src="/delete.png" alt="Delete" class="delete-icon" />
-          </div>
-        </div>
-      </div>
-      <div class="listing-card">
-        <div class="listing-img">
-          <img src="/cat.png" alt="Default Cat" />
-          <div class="quick-view">QUICK VIEW</div>
-        </div>
-        <div class="listing-info">
-          <div class="listing-title">German Shepherd</div>
-          <div class="listing-meta">1h ago · Glendora</div>
-          <div class="listing-actions">
-            <img src="/kid_star.png" alt="Favorite" class="favorite-icon" />
-            <img src="/delete.png" alt="Delete" class="delete-icon" />
-          </div>
-        </div>
-      </div>
-      <div class="listing-card">
-        <div class="listing-img">
-          <img src="/cat.png" alt="Default Cat" />
-          <div class="quick-view">QUICK VIEW</div>
-        </div>
-        <div class="listing-info">
-          <div class="listing-title">Adult female poodle</div>
-          <div class="listing-meta">1h ago · Burbank</div>
-          <div class="listing-actions">
-            <img src="/kid_star.png" alt="Favorite" class="favorite-icon" />
-            <img src="/delete.png" alt="Delete" class="delete-icon" />
-          </div>
-        </div>
-      </div>
-      <div class="listing-card">
-        <div class="listing-img">
-          <img src="/cat.png" alt="Default Cat" />
-          <div class="quick-view">QUICK VIEW</div>
-        </div>
-        <div class="listing-info">
-          <div class="listing-title">Yorkie puppies $1000</div>
-          <div class="listing-meta">3h ago · Rosemead</div>
-          <div class="listing-actions">
+            <span class="listing-meta">{{ listing.meta }}</span>
             <img src="/kid_star.png" alt="Favorite" class="favorite-icon" />
             <img src="/delete.png" alt="Delete" class="delete-icon" />
           </div>
@@ -163,4 +92,24 @@
       <button class="next-btn">Next &gt;</button>
     </div>
   </section>
+
+  <!-- Quick View Side Panel -->
+  <div class="quick-view-panel" *ngIf="quickViewListing">
+    <button class="quick-view-back" (click)="closeQuickView()">&larr; Back</button>
+    <div class="quick-view-content">
+      <div class="quick-view-main-img-wrapper">
+        <button class="quick-view-arrow left" (click)="prevQuickViewImage()">&#8592;</button>
+        <img class="quick-view-main-img" [src]="quickViewImages[quickViewImageIndex]" [alt]="quickViewListing.type === 'cat' ? 'Default Cat' : 'Default Dog'" />
+        <button class="quick-view-arrow right" (click)="nextQuickViewImage()">&#8594;</button>
+      </div>
+      <div class="quick-view-thumbnails">
+        <img *ngFor="let img of quickViewImages; let i = index" class="quick-view-thumb" [src]="img" [alt]="quickViewListing.type === 'cat' ? 'Default Cat' : 'Default Dog'" [class.selected]="i === quickViewImageIndex" (click)="selectQuickViewImage(i)" />
+      </div>
+      <div class="quick-view-title">{{ quickViewListing.title }}</div>
+      <div class="quick-view-desc">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque euismod, urna eu tincidunt consectetur, nisi nisl aliquam nunc, eget aliquam massa nisl quis neque.
+      </div>
+      <button class="quick-view-details">View Details</button>
+    </div>
+  </div>
 </div>
