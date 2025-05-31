@@ -1,0 +1,166 @@
+<!-- Top Navbar -->
+<div class="navbar">
+  <div class="navbar-left">
+    <img src="/storefront.png" alt="Storefront Logo" class="logo-img" />
+    <span class="app-name">Team19List</span>
+    <select class="location-select">
+      <option>Los Angeles</option>
+      <!-- Add more locations as needed -->
+    </select>
+  </div>
+  <div class="navbar-right">
+    <img src="/account_circle.png" alt="User Icon" class="user-icon-img" />
+    <span class="username">Anteater</span>
+  </div>
+</div>
+
+<!-- Search & Controls Bar -->
+<div class="search-controls">
+  <button class="back-btn">&#8592; Back</button>
+  <div class="sort-layout">
+    <select class="sort-select">
+      <option>Sort: Newest</option>
+      <!-- Add more sort options as needed -->
+    </select>
+    <select class="layout-select">
+      <option>Layout</option>
+      <!-- Add more layout options as needed -->
+    </select>
+  </div>
+  <div class="search-bar-wrapper">
+    <input class="search-bar" type="text" placeholder="" />
+    <img src="/Leading-icon.png" alt="Leading Icon" class="search-leading-icon" />
+    <img src="/search_icon.png" alt="Search Icon" class="search-trailing-icon" />
+  </div>
+  <div class="results-count">1 - 6 of 100</div>
+</div>
+
+<div class="main-content">
+  <!-- Filters Sidebar -->
+  <aside class="filters-sidebar">
+    <div class="filters-title">Filters</div>
+    <div class="filter-group">
+      <label>Price</label>
+      <div class="price-inputs">
+        <input type="number" placeholder="min" />
+        <span>$</span>
+        <input type="number" placeholder="max" />
+      </div>
+    </div>
+    <div class="filter-group">
+      <label><input type="checkbox" /> Posted Today</label>
+      <label><input type="checkbox" /> Hide Duplicate</label>
+      <label><input type="checkbox" /> Cats only</label>
+      <label><input type="checkbox" /> Dogs only</label>
+    </div>
+    <div class="filter-group">
+      <label>MILES FROM LOCATION</label>
+      <input type="number" placeholder="Miles" />
+      <input type="text" placeholder="Zipcode" />
+    </div>
+    <div class="filter-actions">
+      <button class="reset-btn">Reset</button>
+      <button class="apply-btn">Apply</button>
+    </div>
+  </aside>
+
+  <!-- Listings Grid -->
+  <section class="listings-section">
+    <div class="listings-grid">
+      <!-- Listing Card Example -->
+      <div class="listing-card">
+        <div class="listing-img">
+          <img src="/cat.png" alt="Default Cat" />
+          <div class="quick-view">QUICK VIEW</div>
+        </div>
+        <div class="listing-info">
+          <div class="listing-title">White cat kittens</div>
+          <div class="listing-meta">1h ago · Ktown</div>
+          <div class="listing-actions">
+            <img src="/kid_star.png" alt="Favorite" class="favorite-icon" />
+            <img src="/delete.png" alt="Delete" class="delete-icon" />
+          </div>
+        </div>
+      </div>
+      <div class="listing-card">
+        <div class="listing-img">
+          <img src="/cat.png" alt="Default Cat" />
+          <div class="quick-view">QUICK VIEW</div>
+        </div>
+        <div class="listing-info">
+          <div class="listing-title">8 weeks old kitten</div>
+          <div class="listing-meta">1h ago · Riverside</div>
+          <div class="listing-actions">
+            <img src="/kid_star.png" alt="Favorite" class="favorite-icon" />
+            <img src="/delete.png" alt="Delete" class="delete-icon" />
+          </div>
+        </div>
+      </div>
+      <div class="listing-card">
+        <div class="listing-img">
+          <img src="/cat.png" alt="Default Cat" />
+          <div class="quick-view">QUICK VIEW</div>
+        </div>
+        <div class="listing-info">
+          <div class="listing-title">Cats for rehoming</div>
+          <div class="listing-meta">3h ago · Norwalk</div>
+          <div class="listing-actions">
+            <img src="/kid_star.png" alt="Favorite" class="favorite-icon" />
+            <img src="/delete.png" alt="Delete" class="delete-icon" />
+          </div>
+        </div>
+      </div>
+      <div class="listing-card">
+        <div class="listing-img">
+          <img src="/cat.png" alt="Default Cat" />
+          <div class="quick-view">QUICK VIEW</div>
+        </div>
+        <div class="listing-info">
+          <div class="listing-title">German Shepherd</div>
+          <div class="listing-meta">1h ago · Glendora</div>
+          <div class="listing-actions">
+            <img src="/kid_star.png" alt="Favorite" class="favorite-icon" />
+            <img src="/delete.png" alt="Delete" class="delete-icon" />
+          </div>
+        </div>
+      </div>
+      <div class="listing-card">
+        <div class="listing-img">
+          <img src="/cat.png" alt="Default Cat" />
+          <div class="quick-view">QUICK VIEW</div>
+        </div>
+        <div class="listing-info">
+          <div class="listing-title">Adult female poodle</div>
+          <div class="listing-meta">1h ago · Burbank</div>
+          <div class="listing-actions">
+            <img src="/kid_star.png" alt="Favorite" class="favorite-icon" />
+            <img src="/delete.png" alt="Delete" class="delete-icon" />
+          </div>
+        </div>
+      </div>
+      <div class="listing-card">
+        <div class="listing-img">
+          <img src="/cat.png" alt="Default Cat" />
+          <div class="quick-view">QUICK VIEW</div>
+        </div>
+        <div class="listing-info">
+          <div class="listing-title">Yorkie puppies $1000</div>
+          <div class="listing-meta">3h ago · Rosemead</div>
+          <div class="listing-actions">
+            <img src="/kid_star.png" alt="Favorite" class="favorite-icon" />
+            <img src="/delete.png" alt="Delete" class="delete-icon" />
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Pagination -->
+    <div class="pagination">
+      <button class="prev-btn">&lt; Previous</button>
+      <button class="page-btn active">1</button>
+      <button class="page-btn">2</button>
+      <button class="page-btn">3</button>
+      <span>...</span>
+      <button class="next-btn">Next &gt;</button>
+    </div>
+  </section>
+</div>
