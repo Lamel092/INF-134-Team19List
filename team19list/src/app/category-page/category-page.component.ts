@@ -83,4 +83,8 @@ export class CategoryPageComponent {
   goToDetailsPage() {
     this.router.navigate(['/post-details']);
   }
+
+  goToLandingPage() {
+    this.router.navigate(['/landing']);
+  }
 }
