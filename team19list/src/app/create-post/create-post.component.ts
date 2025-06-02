@@ -1,15 +1,24 @@
 import { Component } from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { FormBuilder, FormGroup, ReactiveFormsModule } from '@angular/forms';
+import { CommonModule } from '@angular/common';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-create-post',
+  standalone: true,               
+  imports: [ CommonModule, ReactiveFormsModule ],
   templateUrl: './create-post.component.html',
   styleUrls: ['./create-post.component.css']
 })
 export class CreatePostComponent {
-  postForm: FormGroup;
 
-  constructor(private fb: FormBuilder) {
+  postForm: FormGroup;
+  showConfirm = false;
+
+  constructor(
+    private fb: FormBuilder, 
+    private router: Router
+  ) {
     this.postForm = this.fb.group({
       title: [''],
       city: ['Los Angeles'],
@@ -48,5 +57,17 @@ export class CreatePostComponent {
       // Submit `formData` to backend via a service
       console.log('Form submitted:', this.postForm.value);
     }
+  }
+
+  confirmLeave() {
+    this.showConfirm = true;
+  }
+
+  leave() {
+    this.router.navigate(['/landing']);
+  }
+
+  cancelLeave() {
+    this.showConfirm = false;
   }
 }

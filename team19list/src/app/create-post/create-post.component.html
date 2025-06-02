@@ -1,12 +1,24 @@
 <!-- create-post.component.html -->
-<div class="header">
-  <div class="back-btn">&larr; Back</div>
-  <h1><i class="bi bi-shop"></i> Team19List</h1>
-  <div style="color: #5a00b1; font-weight: bold;">Anteater</div>
+<!-- Top Navbar -->
+<div class="navbar">
+  <div class="navbar-left">
+    <img src="/storefront.png" alt="Storefront Logo" class="logo-img" />
+    <span class="app-name">Team19List</span>
+    <select class="location-select">
+      <option>Los Angeles</option>
+    </select>
+  </div>
+  <div class="navbar-right">
+    <img src="/account_circle.png" alt="User Icon" class="user-icon-img" />
+    <span class="username">Anteater</span>
+  </div>
 </div>
 
 <div class="form-section">
   <form [formGroup]="postForm" (ngSubmit)="onSubmit()">
+    <button type="button" class="back-btn" (click)="confirmLeave()">
+      ← Back
+    </button>
     <div class="form-row">
       <div class="form-group col-md-6">
         <label for="title">Title</label>
@@ -83,3 +95,13 @@
   </form>
 </div>
 
+<div class="modal-overlay" *ngIf="showConfirm">
+  <div class="modal-content">
+    <p>Your post has not been published, if you leave now, all content will be lost.</p>
+    <p>Are you sure you want to leave this page?</p>
+    <div class="modal-buttons">
+      <button class="btn-leave" (click)="leave()">Leave</button>
+      <button class="btn-cancel" (click)="cancelLeave()">Cancel</button>
+    </div>
+  </div>
+</div>
