@@ -1,0 +1,66 @@
+<!-- Top Navbar -->
+<div class="navbar">
+  <div class="navbar-left">
+    <img src="/storefront.png" alt="Storefront Logo" class="logo-img" />
+    <span class="app-name">Team19List</span>
+    <select class="location-select">
+      <option>Los Angeles</option>
+    </select>
+  </div>
+  <div class="navbar-right">
+    <img src="/account_circle.png" alt="User Icon" class="user-icon-img" />
+    <span class="username">Anteater</span>
+  </div>
+</div>
+
+<div class="post-details-main">
+  <div class="post-details-back-row">
+    <button class="back-btn" (click)="goBack()">&#8592; Back</button>
+    <div class="post-details-nav">
+      <span>Prev</span>
+      <button class="arrow-btn">&#8592;</button>
+      <button class="arrow-btn">&#8594;</button>
+      <span>Next</span>
+    </div>
+  </div>
+  <div class="post-details-content">
+    <!-- Left: Images -->
+    <div class="post-details-images">
+      <div class="main-img-wrapper">
+        <button class="img-arrow left">&#8592;</button>
+        <img class="main-img" src="/cat.png" alt="White cat kittens" />
+        <button class="img-arrow right">&#8594;</button>
+      </div>
+      <div class="thumbnails">
+        <img class="thumb" src="/cat.png" alt="White cat kittens" />
+        <img class="thumb" src="/cat.png" alt="White cat kittens" />
+        <img class="thumb" src="/cat.png" alt="White cat kittens" />
+      </div>
+    </div>
+    <!-- Right: Details -->
+    <div class="post-details-info">
+      <div class="post-details-title-row">
+        <div class="post-details-title">White cat kittens</div>
+        <div class="post-details-location">
+          <img src="/location.png" alt="Location" class="location-icon-img" />
+          <span>Los Angeles</span>
+        </div>
+      </div>
+      <div class="post-details-meta">
+        <span>Posted 2 hours ago</span>
+        <span>Updated 1 hours ago</span>
+      </div>
+      <div class="post-details-desc">
+        I have 4 white kitten available for re-homing: 2 boys and 2 girls.<br />
+        Email me for more details:-)
+      </div>
+      <div class="post-details-actions">
+        <button class="contact-btn">Contact Me!</button>
+        <img src="/kid_star.png" alt="Favorite" class="action-icon" />
+        <img src="/flag.png" alt="flag" class="action-icon" />
+        <img src="/open_in_new.png" alt="Open" class="action-icon" />
+        <img src="/delete.png" alt="Delete" class="action-icon" />
+      </div>
+    </div>
+  </div>
+</div>

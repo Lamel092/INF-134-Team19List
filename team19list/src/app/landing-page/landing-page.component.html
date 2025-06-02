@@ -1,0 +1,89 @@
+<!-- Top Navbar -->
+<div class="navbar">
+  <div class="navbar-left">
+    <img src="/storefront.png" alt="Storefront Logo" class="logo-img" />
+    <span class="app-name">Team19List</span>
+  </div>
+  <div class="navbar-right">
+    <img src="/account_circle.png" alt="User Icon" class="user-icon-img" />
+    <span class="username">Anteater</span>
+  </div>
+</div>
+
+<!-- Top Bar: Left (location, post), Center (icons, search) -->
+<div class="landing-topbar">
+  <div class="landing-topbar-left">
+    <div class="location-group">
+      <img src="/location.png" alt="Location" class="location-icon-img" />
+      <span class="location-text">Los Angeles</span>
+    </div>
+    <div class="nearby-group">
+      <img src="/other.png" alt="Nearby Cities" class="nearby-icon-img" />
+      <span class="nearby-text">Nearby Cities</span>
+    </div>
+    <button class="post-btn"><img src="/post.png" alt="Post" class="post-icon-img" /> Post</button>
+    <button class="my-posts-btn"><img src="/myposts.png" alt="My Posts" class="myposts-icon-img" /> My Posts</button>
+  </div>
+  <div class="center-absolute">
+    <div class="icon-nav">
+      <div class="icon-nav-item"><img src="/community.png" alt="Community" class="icon-nav-img" /><span>Community</span></div>
+      <div class="icon-nav-item"><img src="/housing.png" alt="Housing" class="icon-nav-img" /><span>Housing</span></div>
+      <div class="icon-nav-item"><img src="/service.png" alt="Service" class="icon-nav-img" /><span>Service</span></div>
+      <div class="icon-nav-item"><img src="/pets.png" alt="Pets" class="icon-nav-img" /><span>Pets</span></div>
+      <div class="icon-nav-item"><img src="/other.png" alt="Other" class="icon-nav-img" /><span>Other</span></div>
+    </div>
+    <div class="search-bar-wrapper">
+      <img src="/Leading-icon.png" alt="Leading Icon" class="search-leading-icon" />
+      <input class="search-bar" type="text" placeholder="Search Service ..." (keydown)="onSearchKeydown($event)" />
+      <img src="/search_icon.png" alt="Search Icon" class="search-trailing-icon" />
+    </div>
+  </div>
+</div>
+
+<!-- Main Category Cards -->
+<div class="category-cards">
+  <div class="category-card">
+    <div class="category-title">Community</div>
+    <ul>
+      <li>General</li>
+      <li>Groups</li>
+      <li>Events</li>
+      <li>Volunteers</li>
+      <li>Local News</li>
+      <li>Lost+Found</li>
+    </ul>
+  </div>
+  <div class="category-card">
+    <div class="category-title">Housing</div>
+    <ul>
+      <li>General</li>
+      <li>Buy</li>
+      <li>Rent</li>
+      <li>Sell</li>
+      <li>Parking</li>
+      <li>Storage</li>
+    </ul>
+  </div>
+  <div class="category-card">
+    <div class="category-title">Service</div>
+    <ul>
+      <li>General</li>
+      <li>Legal</li>
+      <li>Beauty</li>
+      <li>Automotive</li>
+      <li>Cell/Mobile</li>
+      <li>Farm+Garden</li>
+    </ul>
+  </div>
+  <div class="category-card">
+    <div class="category-title">Pets</div>
+    <ul>
+      <li><a href="javascript:void(0)" (click)="goToCategoryPage()">General</a></li>
+      <li>Dogs</li>
+      <li>Cats</li>
+      <li>Others</li>
+      <li>Pet Supplies</li>
+      <li>Pet Adoption</li>
+    </ul>
+  </div>
+</div>

@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { Router } from '@angular/router';
 
 interface Listing {
   title: string;
@@ -14,6 +15,7 @@ interface Listing {
   styleUrl: './category-page.component.css'
 })
 export class CategoryPageComponent {
+  constructor(private router: Router) {}
   listings: Listing[] = [
     { title: 'White cat kittens', meta: '1h ago · Ktown', type: 'cat' },
     { title: '8 weeks old kitten', meta: '1h ago · Riverside', type: 'cat' },
@@ -76,5 +78,9 @@ export class CategoryPageComponent {
 
   selectQuickViewImage(idx: number) {
     this.quickViewImageIndex = idx;
+  }
+
+  goToDetailsPage() {
+    this.router.navigate(['/post-details']);
   }
 }

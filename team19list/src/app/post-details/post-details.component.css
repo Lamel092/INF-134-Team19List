@@ -1,0 +1,235 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 32px;
+    background: #fff;
+    border-bottom: 1px solid #e0e0e0;
+  }
+  .navbar-left {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .logo-img {
+    width: 32px;
+    height: 32px;
+    object-fit: contain;
+    margin-right: 8px;
+  }
+  .app-name {
+    font-weight: 700;
+    color: #6c2eb7;
+    font-size: 1.5rem;
+    margin-right: 16px;
+  }
+  .location-select {
+    padding: 4px 12px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+  }
+  .navbar-right {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .user-icon-img {
+    width: 28px;
+    height: 28px;
+    object-fit: contain;
+    margin-right: 4px;
+  }
+  .username {
+    color: #6c2eb7;
+    font-weight: 600;
+  }
+  
+  .post-details-main {
+    padding: 40px 0 0 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+  .post-details-back-row {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 18px;
+    gap: 32px;
+    max-width: 1200px;
+  }
+  .back-btn {
+    background: none;
+    border: none;
+    font-size: 1.1rem;
+    color: #444;
+    cursor: pointer;
+    font-weight: 500;
+    margin-right: 18px;
+  }
+  .post-details-nav {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 1rem;
+    color: #444;
+  }
+  .arrow-btn {
+    background: none;
+    border: none;
+    font-size: 1.2rem;
+    color: #444;
+    cursor: pointer;
+    margin: 0 4px;
+  }
+  .post-details-content {
+    display: flex;
+    flex-direction: row;
+    gap: 64px;
+    width: 100%;
+    max-width: 1200px;
+    margin-top: 12px;
+    align-items: center;
+    justify-content: center;
+  }
+  .post-details-images {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 320px;
+  }
+  .main-img-wrapper {
+    display: flex;
+    align-items: center;
+    position: relative;
+  }
+  .main-img {
+    width: 260px;
+    height: 260px;
+    border-radius: 18px;
+    background: #e0e0e0;
+    object-fit: contain;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  }
+  .img-arrow {
+    background: none;
+    border: none;
+    font-size: 1.8rem;
+    color: #444;
+    cursor: pointer;
+    margin: 0 16px;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.15s;
+  }
+  .img-arrow:hover {
+    background: #f3eaff;
+  }
+  .thumbnails {
+    display: flex;
+    gap: 16px;
+    margin-top: 22px;
+  }
+  .thumb {
+    width: 68px;
+    height: 68px;
+    border-radius: 12px;
+    background: #e0e0e0;
+    object-fit: contain;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+  }
+  .post-details-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    margin-top: 0;
+    align-items: flex-start;
+    justify-content: center;
+  }
+  .post-details-title-row {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    margin-bottom: 6px;
+  }
+  .post-details-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #222;
+  }
+  .post-details-location {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    color: #3b5bdb;
+    font-weight: 600;
+    font-size: 1.05rem;
+  }
+  .location-icon-img {
+    width: 22px;
+    height: 22px;
+  }
+  .post-details-meta {
+    color: #888;
+    font-size: 0.98rem;
+    display: flex;
+    gap: 18px;
+    margin-bottom: 8px;
+  }
+  .post-details-desc {
+    color: #444;
+    font-size: 1.08rem;
+    margin-bottom: 18px;
+  }
+  .post-details-actions {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+    margin-top: 18px;
+  }
+  .contact-btn {
+    background: #b39ddb;
+    color: #fff;
+    border: none;
+    border-radius: 22px;
+    padding: 14px 38px;
+    font-size: 1.08rem;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 1.5px 6px rgba(108,46,183,0.10);
+    transition: background 0.15s;
+  }
+  .contact-btn:hover {
+    background: #6c2eb7;
+  }
+  .action-icon {
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+    opacity: 0.85;
+    transition: opacity 0.15s;
+  }
+  .action-icon:hover {
+    opacity: 1;
+  }
+  @media (max-width: 900px) {
+    .post-details-main {
+      padding: 20px 4vw 0 4vw;
+    }
+    .post-details-content {
+      flex-direction: column;
+      gap: 24px;
+      align-items: center;
+    }
+    .post-details-images {
+      min-width: 0;
+    }
+  }
+  
